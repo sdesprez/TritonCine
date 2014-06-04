@@ -1,0 +1,36 @@
+<ng-include src="'views/header.html'"></ng-include>
+
+<div class="cadrecentre">Nous contacter</div>
+<br/>
+<div class="col-sm-6">
+	<div class="textbig">Vous pouvez nous écrire à cette adresse :</div>
+	<div class="text">marie.magnien@epfedu.fr</div><br/>
+	<div class="text">Ou alors :</div><br/>
+	<div class="text">sylvain.desprez@epfedu.fr</div>
+	<br/><br/>
+	<div class="textbig">Vous pouvez également nous téléphoner :</div>
+	<div class="text">01.23.45.67.89</div>
+	<br/>
+	<div class="textbig">Venez nous faire un petit coucou !</div>
+	<div class="text">6 rue de la pataterie responsive<br/>
+		92330 Angulargiess CSSDEX</div>
+</div>
+
+<div class="col-sm-6">
+	<div class="textbig">Sinon, vous pouvez nous écrire directement avec ce formulaire :</div>
+	<br/><br/>
+    <div style="text-align:center">
+		<label>Adresse mail :</label>
+		<input ng-model="Adresse" type="text" placeholder="Adresse">
+		<br/><br/>
+		<label>Votre message :</label>
+		<br/>
+		<textarea id="message" ng-model="Message" type="text" placeholder="Votre message"></textarea>
+		<br/><br/>
+		<button type="submit" class="btn-lg btn succes" ng-click="Envoyer()">Envoyer</button>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+<footer-display page="'contact'"></footer-display>

@@ -1,0 +1,55 @@
+<ng-include src="'views/header.html'"></ng-include>
+
+<div class="cadrecentre">"{{titre}}"</div>
+
+<br/><br/>
+
+<div><div class="underl">Pays :</div>{{informations.countries[0]}}</div>
+<br/>
+<div>
+	<div class="underl">Directeurs :</div>
+	<div ng-repeat="director in informations.directors">{{director.name}}</div>
+</div>
+
+<br/>
+<div>
+	<div class="underl">Lieux de tournage:</div>
+	<div ng-repeat="location in informations.filmingLocations">{{location}}</div>
+</div>
+
+<br/>
+<div>
+	<div class="underl">Genres :</div>
+	<div ng-repeat="genre in informations.genres">{{genre}}</div>
+</div>
+
+<br/>
+<div>
+	<div class="underl">Langue :</div>
+	<div ng-repeat="language in informations.languages">{{language}}</div>
+</div>
+
+<br/>
+<div>
+	<div class="underl">Résumé :</div>
+	{{informations.plot}}
+</div>
+
+<br/>
+<div>
+	<div class="underl">Durée du film :</div>
+	{{informations.runtime[0]}}
+</div>
+
+<br/>
+<div>
+	<div class="underl">Auteurs :</div>
+	<div ng-repeat="writer in informations.writers">{{writer.name}}</div>
+</div>
+
+<br/>
+	<div><div class="underl">Année :</div>
+	{{informations.year}}
+</div>
+
+<footer-display page="'description'"></footer-display>

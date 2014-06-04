@@ -1,0 +1,15 @@
+<ng-include src="'views/header.html'"></ng-include>
+
+<div class="cadrecentre">Les films de {{realisateur}}</div>
+
+<br/><br/>
+
+<div class="cadre">
+  <colonnes-display show="false"><colonnes-display>
+</div>
+
+<div ng-repeat="film in films.records | orderBy:orderProp" class="row">
+	<film-display film="film"  show="false"></film-display>
+</div>
+
+<footer-display page="'realisateur'"></footer-display>
