@@ -10,6 +10,34 @@ $background-color:#FFFF99;
 $background-tri:#F6D557;
 $background-title:#D21B01;
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+.cadre {
+  @include border-radius(10px);
+  border-style:solid;
+  border-width:2px;
+  margin-bottom: 15px;
+}
+
+.cadretri{
+  @extend .cadre;
+  background-color:$background-tri;
+}
+
+.cadrecentre {
+  @extend .cadre;
+  text-align:center;
+  border-width:medium;
+  font-size:20px;
+}
+
+
 .browsehappy {
     margin: 0.1em;
     color: #000;
@@ -35,21 +63,31 @@ body {
 .header {
     border-bottom: 1px solid #e5e5e5;
     text-align:center;
+
+    >div{
+      @extend .cadre;
+      background-color:$background-title;
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+
+    h4{   
+        color:$background-color;
+    }
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-}
-.header h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-}
 
 h1 {
     margin-top: 0;
@@ -73,22 +111,20 @@ h4 {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 15px;
-    color:$background-color;
     line-height: 40px;
     padding-bottom: 0px;
 }
 
-.textbig {
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 20px;
-    text-align: center;
-}
 .text {
     font-size: 15px;
     line-height: 20px;
     text-align: center;
 }
+.textbig {
+    @extend .text;
+    font-weight: bold;
+}
+
 
 .sous-titre {
     margin-top: 0;
@@ -104,6 +140,10 @@ h4 {
     color: #background-color;
     border-top: 1px solid #e5e5e5;
     text-align: center;
+
+    >div{
+        @extend .cadretri;
+    }
 }
 
 .container-narrow > hr {
@@ -114,12 +154,13 @@ h4 {
 .jumbotron {
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
+
+    .btn{
+        font-size: 21px;
+        padding: 14px 24px;  
+    }
 }
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
 
 /* Supporting marketing content */
 .marketing {
@@ -157,40 +198,14 @@ h4 {
     text-decoration: underline;
 }
 
-.cadretitre {
-  border-radius: 10px;
-  border-style:solid;
-  border-width:2px;
-  background-color:$background-title;
-  margin-bottom: 15px;
-}
-
-.cadrefooter {
-  border-radius: 10px;
-  border-style:solid;
-  border-width:2px;
-  background-color:$background-tri;
-  margin-bottom: 15px;
-}
-
-.cadre {
-  border-radius: 10px;
-  border-style:solid;
-  border-width:2px;
-  background-color:$background-tri;
-  margin-bottom: 15px;
-}
-
-.cadrecentre {
-  border-radius: 10px;
-  text-align:center;
-  border-style:solid;
-  border-width:medium;
-  font-size:20px;
-  background-color:$background-color;
-  margin-bottom: 15px;
-}
-
 .pointeur {
     cursor: pointer;
+}
+
+.tab{
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
 }

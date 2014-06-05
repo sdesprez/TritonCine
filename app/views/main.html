@@ -1,14 +1,13 @@
-<body ng-controller="ScrollCtrl">
+<body>
 
 <ng-include src="'views/header.html'"></ng-include>
 
 Rechercher un film :
-<input type="text" ng-model="query"/>
-
+<input type="text" ng-model="query.fields.titre"/>
 <br/><br/>
 
-<div class="cadre" colonnes-display show="true"></div>
-<div ng-repeat="film in liste.records | filter:query | orderBy:orderProp " class="row">
+<div class="cadretri" colonnes-display show="true"></div>
+<div ng-repeat="film in liste | filter:query | orderBy:orderProp " class="row tab">
   <film-display film="film"  show="true" ></film-display>
 </div>
 

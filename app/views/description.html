@@ -4,51 +4,56 @@
 
 <br/><br/>
 
-<div><div class="underl">Pays :</div>{{informations.countries[0]}}</div>
+<div>
+	<div class="underl bold">Pays :</div>
+	{{informations.countries[0]}}
+</div>
+
 <br/>
 <div>
-	<div class="underl">Directeurs :</div>
+	<div class="underl bold">Directeurs :</div>
 	<div ng-repeat="director in informations.directors">{{director.name}}</div>
 </div>
 
 <br/>
 <div>
-	<div class="underl">Lieux de tournage:</div>
+	<div class="underl bold">Lieux de tournage:</div>
 	<div ng-repeat="location in informations.filmingLocations">{{location}}</div>
 </div>
 
 <br/>
 <div>
-	<div class="underl">Genres :</div>
+	<div class="underl bold">Genres :</div>
 	<div ng-repeat="genre in informations.genres">{{genre}}</div>
 </div>
 
 <br/>
 <div>
-	<div class="underl">Langue :</div>
+	<div class="underl bold">Langue :</div>
 	<div ng-repeat="language in informations.languages">{{language}}</div>
 </div>
 
 <br/>
 <div>
-	<div class="underl">Résumé :</div>
+	<div class="underl bold">Résumé :</div>
 	{{informations.plot}}
 </div>
 
 <br/>
 <div>
-	<div class="underl">Durée du film :</div>
+	<div class="underl bold">Durée du film :</div>
 	{{informations.runtime[0]}}
 </div>
 
 <br/>
 <div>
-	<div class="underl">Auteurs :</div>
+	<div class="underl bold">Auteurs :</div>
 	<div ng-repeat="writer in informations.writers">{{writer.name}}</div>
 </div>
 
 <br/>
-	<div><div class="underl">Année :</div>
+<div>
+	<div class="underl bold">Année :</div>
 	{{informations.year}}
 </div>
 

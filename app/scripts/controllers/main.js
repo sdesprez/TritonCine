@@ -5,7 +5,7 @@ angular.module('tritonCineApp')
     $scope.orderProp='fields.rang';
     $http.get('http://public.opendatasoft.com/api/records/1.0/search?dataset=les-plus-grands-succes-du-cinema-depuis-1945&rows=200')
     .success(function(data){
-      $scope.liste=data;
+      $scope.liste=data.records;
     });
 
     $scope.rang='fields.rang';

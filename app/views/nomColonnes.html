@@ -1,11 +1,10 @@
-
-<div class="row">
-  <p class="col-sm-1"></p>
-  <p class="col-sm-1 pointeur | hidden-xs" ng-click="$parent.trier($parent.rang)">Rang</p>
-  <p class="col-sm-2 pointeur"  ng-click="$parent.trier($parent.rang)">Nombre d'entrées</p>
-  <p class="col-sm-2 pointeur" ng-click="$parent.trier($parent.titre)">Titre</p>
-  <p class="col-sm-2 pointeur" ng-click="$parent.trier($parent.realisateur)" ng-show="show">Réalisateur</p>
-  <p class="col-sm-2 pointeur | hidden-xs " ng-click="$parent.trier($parent.annee)">Année de sortie</p>
-  <p class="col-sm-1 | hidden-xs">  Infos</p>
-  <p class="col-sm-1 | hidden-sm hidden-lg hidden-md" >+</p>
+<div class="row tab">
+  <p class="col-xs-2 pointeur" ng-click="$parent.trier($parent.rang)">Rang</p>
+  <p class="col-xs-2 pointeur" ng-click="$parent.trier($parent.rang)">Nombre d'entrées</p>
+  <p class="col-xs-2 pointeur | hidden-xs" ng-click="$parent.trier($parent.titre)">Titre</p>
+  <p class="col-xs-3 pointeur | hidden-sm hidden-lg hidden-md" ng-click="$parent.trier($parent.titre)">Titre</p>
+  <p class="col-xs-2 pointeur | hidden-xs" ng-click="$parent.trier($parent.realisateur)" ng-show="show">Réalisateur</p>
+  <p class="col-xs-3 pointeur | hidden-sm hidden-lg hidden-md" ng-click="$parent.trier($parent.realisateur)" ng-show="show">Réalisateur</p>
+  <p class="col-xs-2 pointeur | hidden-xs " ng-click="$parent.trier($parent.annee)">Année de sortie</p>
+  <p class="col-xs-2">Infos</p>
 </div>
