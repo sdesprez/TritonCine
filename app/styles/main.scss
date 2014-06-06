@@ -120,10 +120,6 @@ h4 {
     line-height: 20px;
     text-align: center;
 }
-.textbig {
-    @extend .text;
-    font-weight: bold;
-}
 
 
 .sous-titre {
@@ -200,12 +196,4 @@ h4 {
 
 .pointeur {
     cursor: pointer;
-}
-
-.tab{
-    text-align: center;
-}
-
-.bold{
-    font-weight: bold;
 }

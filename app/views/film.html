@@ -1,10 +1,10 @@
 <p class="col-xs-2">{{film.fields.rang}}</p>
 <p class="col-xs-2">{{film.fields.entrees_millions}}</p>
 <p class="col-xs-2 | hidden-xs">{{film.fields.titre}}</p>
-<p class="col-xs-3 | hidden-sm hidden-lg hidden-md">{{film.fields.titre}}</p>
+<p class="col-xs-3 | visible-xs">{{film.fields.titre}}</p>
 <a class="col-xs-2 | hidden-xs" ng-href="#/realisateur/{{film.fields.realisateur}}" ng-show="show">{{film.fields.realisateur}}</a>
-<a class="col-xs-3 | hidden-sm hidden-lg hidden-md" ng-href="#/realisateur/{{film.fields.realisateur}}" ng-show="show">{{film.fields.realisateur}}</a>
+<a class="col-xs-3 | visible-xs" ng-href="#/realisateur/{{film.fields.realisateur}}" ng-show="show">{{film.fields.realisateur}}</a>
 <p class="col-xs-2 | hidden-xs">{{film.fields.annee_de_sortie}}</p>
 <a class="col-xs-2 | hidden-xs" ng-href="#/description/{{film.fields.titre}}"><button>Plus d'info</button></a>
-<a class="col-xs-2 | hidden-sm hidden-lg hidden-md" ng-href="#/description/{{film.fields.titre}}"><button><i class="glyphicon glyphicon-plus"></i></button></a>
+<a class="col-xs-2 | visible-xs" ng-href="#/description/{{film.fields.titre}}"><button><i class="glyphicon glyphicon-plus"></i></button></a>
 
