@@ -1,6 +1,6 @@
 ﻿TritonCine
 
-TritonCine est un cite utilisant les données "les-plus-grands-succes-du-cinema-depuis-1945" fournies par l'api http://public.opendatasoft.com/api/.
+TritonCine est un site utilisant les données "les-plus-grands-succes-du-cinema-depuis-1945" fournies par l'api http://public.opendatasoft.com/api/.
 Cette api fournit les 200 films ayant fait le plus d'entrées au cinéma entre 1945 et 2012.
 
 Exemple de réponse pour la requête 
