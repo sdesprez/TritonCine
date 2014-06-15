@@ -1,7 +1,7 @@
-TritonCine
+﻿TritonCine
 
 TritonCine est un cite utilisant les données "les-plus-grands-succes-du-cinema-depuis-1945" fournies par l'api http://public.opendatasoft.com/api/.
-Cette api fournie les 200 films ayant fait le plus d'entrées au cinéma entre 1945 et 2012.
+Cette api fournit les 200 films ayant fait le plus d'entrées au cinéma entre 1945 et 2012.
 
 Exemple de réponse pour la requête 
 	"http://public.opendatasoft.com/api/records/1.0/search?dataset=les-plus-grands-succes-du-cinema-depuis-1945&rows=1":
@@ -31,21 +31,16 @@ Exemple de réponse pour la requête
 	}
 
 
-Les résultats sont triée de base selon le rang mais il est possible de changer le critère en cliquant sur un nom de colonne (et en cliquant à nouveau pour trier selon l'ordre inverse).
+Les résultats sont initialement triés selon leur rang mais il est possible de changer le critère en cliquant sur un nom de colonne (et en cliquant à nouveau pour trier selon l'ordre inverse).
 Il est également possible de faire un recherche selon le nom d'un film grâce au champ de recherche.
 
 
-
-
-Lorque l'on clique sur le nom d'un réalisateur, on accède à une nouvelle page affichant tous les films de ce réalisateur entrant dans ce classement. Pour chacun de ces films, on affiche les mêmes données que précédemment, à l'exception du nom du réalisateur.
-
-
-
+Lorque l'on clique sur le nom d'un réalisateur, on accède à une nouvelle page affichant tous les films de ce réalisateur entrant dans ce classement. Pour chacun de ces film, on affiche les mêmes données que précédemment, à l'exception du nom du réalisateur puisqu'il est déjà en haut de la page.
 
 
 Le bouton "Plus d'info" (ou "+" pour les écrans de petite taille) permet d'afficher les détails d'un film.
 Ces informations sont obtenues à l'aide d'une autre api : http://www.myapifilms.com/ en effectuant une recherche selon le nom du film.
-Nous avons un problème avec le Cross-origin resource sharing (CORS) que nous avons résolu en demandant une réponse en JSONP plutôt qu'en JSON.
+Nous avions un problème avec le Cross-origin resource sharing (CORS) que nous avons résolu en demandant une réponse en JSONP plutôt qu'en JSON.
 
 Exemple de réponse pour la requête "http://www.myapifilms.com/search?format=JSONP&callback=angular.callbacks._0&title=Titanic" :
 
@@ -98,16 +93,10 @@ Exemple de réponse pour la requête "http://www.myapifilms.com/search?format=JS
 	   }
 	]);
 
-Il est a noté que le format de la réponse est suceptible de changer. En effet, depuis notre première utilisation, il y a déjà eu un changement au niveau des "directors" qui n'était qu'un tableau de textes et qui est maintenant un tableau d'objets comprenant un name et un nameId.
+Il est à noter que le format de la réponse est suceptible de changer. En effet, depuis notre première utilisation, il y a déjà eu un changement au niveau des "directors" qui n'était qu'un tableau de textes et qui est maintenant un tableau d'objets comprenant un name et un nameId.
 Nous souhaitions également utiliser l'urlPoster afin d'afficher le poster du film dans notre site. Cependant, même si l'url est correcte, lorsqu'il est utilisé comme source pour une image de notre site, nous recevons une réponse "403 Forbidden".
 
-
-
-
-
-
-
-
+-----------------------------------------------------------------------------------------
 
 Bootstrap
 Utilisation des classes
@@ -141,13 +130,11 @@ Utilisation de l'héritage avec
 Utilisation du nesting afin de donner des styles particuliers uniquement aux premiers div des classes .header et .footer
 
 
-
-
 AngularJS:
 Création des directives
 	colonnesDisplay qui affiche les noms des colonnes des tableaux de films 
 	filmDisplay qui correspond à une ligne des tableaux de films et affiche les données fournies par l'api
-	footerDisplay afin d'afficher le footer. Les liens affiché dans le footer dépendent de la page
+	footerDisplay afin d'afficher le footer. Les liens affichés dans le footer dépendent de la page
 colonnesDisplay et filmDisplay affichent le réalisateur si la valeur de show est "true"
 
 Utilisation de 
@@ -157,10 +144,10 @@ Utilisation de
 	ng-repeat afin d'afficher tous les éléments des tableaux reçu par les apis
 	ng-click pour gérer les cliques sur les titres des colonnes et trier en fonction de la colonne
 
-Utilisation de filter et orderBy lors de l'affichage des listes de film afin de filtrer selon le nom du film et de trier selon différents critère
+Utilisation de filter et orderBy lors de l'affichage des listes de films afin de filtrer selon le nom du film et de trier selon différents critères
 
 Utilisation du routeProvider
-Les routes /realisateur/:realisateur et /description/:titre demande respectivement le nom du réalisateur et le titre d'un film en paramètre
+Les routes /realisateur/:realisateur et /description/:titre demande respectivement le nom du réalisateur et le titre d'un film en paramètres
 
 
 
