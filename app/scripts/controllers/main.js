@@ -49,11 +49,11 @@ angular.module('tritonCineApp')
 
 angular.module('tritonCineApp')
   .controller('DescriptionCtrl',function ($scope,$http,$routeParams) {
-      $scope.titre=$routeParams.titre;
-      var uri = '?format=JSONP&callback=JSON_CALLBACK&title='+$scope.titre;
-  	  var res = encodeURI(uri);
-      $http.jsonp('http://www.myapifilms.com/search'+res)
-      .success(function(data){
+    $scope.titre=$routeParams.titre;
+    var uri = '?format=JSONP&callback=JSON_CALLBACK&title='+$scope.titre;
+    var res = encodeURI(uri);
+    $http.jsonp('http://www.myapifilms.com/search'+res)
+    .success(function(data){
       $scope.informations=data[0];
     });
   });

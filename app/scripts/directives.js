@@ -33,21 +33,3 @@ angular.module('tritonCineApp')
 			templateUrl: 'views/footer.html'
 		};
 	});
-
-/*
-angular.module('tritonCineApp')
-	.directive('scrollOnClick', function() {
-	 	return {
-	 		scope : {
-				page:'='
-			},
-	  	 	restrict: 'AEC',
-	   		link: function(scope, $elm) {
-	     	$elm.on('click', function() {
-	       	$("body").animate({scrollTop: $elm.offset().top}, "slow");
-	     });
-	}
- }
-});
-
-*/
